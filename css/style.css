@@ -198,6 +198,35 @@ ul{
   padding-bottom: 0 !important;
 }
 
+/* Register Now button fixed */
+#registerNowFixed {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--main-gradient);
+  border-radius: 10px 0 0 10px;
+  padding: 20px 8px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  z-index: 1050;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  user-select: none;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  border: none;
+  transition: background 0.3s ease;
+  font-weight: 400;
+}
+
+#registerNowFixed:hover {
+  background: linear-gradient(135deg, #a072ba, #74c7c8);
+  text-decoration: none;
+}
+
 
 
 /* Header Styles */
@@ -1859,8 +1888,8 @@ footer li a {
 
     .date-card-purple {
       background: linear-gradient(177deg,rgba(127, 82, 159, 1) 0%, rgba(46, 29, 57, 1) 100%);
-      right: 25%;
-      top: 30%;
+      right: 100px;
+      top: 200px;
       
 
     }
@@ -3737,6 +3766,29 @@ h5.please-enter{
 
 }
 
+@media screen and (min-width: 1200px){
+
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+
+    .date-card{
+      position: unset;
+      min-width: 45%;
+    }
+
+  
+
+.date-card-teal{
+  transform: unset;
+}
+
+.date-cards-container {
+   
+    justify-content: space-evenly;
+}
+}
+
 @media (min-width: 769px) and (max-width: 992px) {
   .countdown-amount {
     font-size: 32px;
@@ -3767,12 +3819,13 @@ h5.please-enter{
 
   }
 
+  
   #section-hero{
-    height: 1000px !important;
-  }
-  #wrapper2 #section-hero{
     height: 540px !important;
   }
+  .bredcrumb {
+    position: absolute;
+    top: 35%;} 
 
   .bg-video{
     height: auto;
