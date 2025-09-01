@@ -2833,8 +2833,8 @@ color: rgba(0, 0, 0, .8) !important;
 }
 
 /* Phones horizontal (landscape) */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  #home{
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  #hero-section{
     height: 650px !important;
   }
   .main-logo img {
