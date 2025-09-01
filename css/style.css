@@ -2837,6 +2837,13 @@ color: rgba(0, 0, 0, .8) !important;
   #home{
     height: 650px !important;
   }
+  .main-logo img {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+}
 }
 
 
