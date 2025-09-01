@@ -62,7 +62,7 @@ ul{
     }
 
     .hero-section {
-  min-height: 100vh !important;}
+  min-height: 100dvh !important;}
 
 
 }
@@ -390,7 +390,7 @@ color: var(--secondary-color) !important;
 
 /* Hero Section with Video Background */
 .hero-section {
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   display: flex;
   align-items: end;
@@ -2832,9 +2832,7 @@ color: rgba(0, 0, 0, .8) !important;
   }
 }
 
-@media (min-width: 769px) and (max-width: 768px){
 
-}
 
 @media (max-width: 768px) {
   .countdown-timer {
@@ -2948,10 +2946,10 @@ h2.committee-title{
 .countdown-period{
   font-size: 10px !important;
 }
-#section-hero{
+/* .section-hero{
     height: 650px !important;
-  }
-  #wrapper2 #section-hero{
+  } */
+  #section-hero{
     height: 540px !important;
   }
 
