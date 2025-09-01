@@ -620,7 +620,7 @@ bottom: 0;
 .countdown-timer {
   display: flex;
   text-align: center;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .countdown-item {
@@ -2834,7 +2834,7 @@ color: rgba(0, 0, 0, .8) !important;
 
 /* Phones horizontal (landscape) */
 @media (min-width: 769px) and (max-width: 991px) {
-  #hero-section{
+  .hero-section{
     height: 650px !important;
   }
   .main-logo img {
