@@ -2833,17 +2833,11 @@ color: rgba(0, 0, 0, .8) !important;
 }
 
 /* Phones horizontal (landscape) */
-@media (min-width: 769px) and (max-width: 991px) {
+@media (min-width: 769px) and (orientation: landscape) {
   .hero-section{
     height: 650px !important;
   }
-  .main-logo img {
-    width: 60%;
-    position: absolute;
-    right: 0;
-    top: 30%;
-    transform: translateY(-50%);
-}
+ 
 }
 
 
