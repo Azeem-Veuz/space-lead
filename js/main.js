@@ -216,8 +216,8 @@ $(document).ready(function(){
     
     responsive:{
       0:{ items:1.2 },
-      576:{ items:2.4 },
-      768:{ items:3.6 },
+      576:{ items:2.3 },
+      768:{ items:2.8},
       1200:{ items:3.8 },
         1400:{ items:4.2  },
         1600:{ items:4.8 }
@@ -238,8 +238,8 @@ $(document).ready(function(){
     autoplayTimeout:3000,
     responsive:{
       0:{ items:1.2 },     // phone
-      768:{ items:3.1 },   // tablet
-      1024:{ items:3.7 },
+      768:{ items:2.1 },   // tablet
+      1024:{ items:3.3 },
       1200:{ items:4.3 } // laptop/desktop
     }
   });
@@ -257,7 +257,7 @@ $(document).ready(function(){
     center: true,
     responsive: {
       0: { items: 1 },
-      600: { items: 3 },
+      600: { items: 2 },
       1200: { items: 3 }
     }
   });
@@ -311,8 +311,8 @@ owl.on('changed.owl.carousel', function(event) {
   rtl: false, // left to right
   responsive: {
     0: { items: 1 },
-    500: { items: 3 },
-    800: { items: 4 },
+    500: { items: 2 },
+    800: { items: 3 },
     1200: { items: 6 }
   }
 });
@@ -329,20 +329,17 @@ $(".row2").owlCarousel({
   rtl: true, // right to left
   responsive: {
     0: { items: 1 },
-    500: { items: 3 },
-    800: { items: 4 },
+    500: { items: 2 },
+    800: { items: 3 },
     1200: { items: 6 }
   }
 });
 
-// Wait until page is fully loaded
-    window.addEventListener("load", function() {
-      const preloader = document.getElementById("preloader");
-      const pageContent = document.getElementById("page-content");
-
-      preloader.style.display = "none";   // hide preloader
-      pageContent.style.display = "block"; // show page
-    });
+// Hide preloader after page load
+window.addEventListener("load", function() {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+});
 
     // testimonial carousel
 
