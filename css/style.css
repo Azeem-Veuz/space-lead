@@ -2833,7 +2833,7 @@ color: rgba(0, 0, 0, .8) !important;
 }
 
 /* Phones horizontal (landscape) */
-@media (min-width: 768px) and (orientation: landscape) {
+@media (min-width: 769px) and (max-width: 991px) {
   #hero-section{
     height: 650px !important;
   }
