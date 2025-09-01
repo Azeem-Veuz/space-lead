@@ -2832,6 +2832,12 @@ color: rgba(0, 0, 0, .8) !important;
   }
 }
 
+/* Phones horizontal (landscape) */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  #home{
+    height: 650px !important;
+  }
+}
 
 
 @media (max-width: 768px) {
@@ -2928,6 +2934,8 @@ h2.committee-title{
 
   }
 
+  
+
   .abs-centered {
         top: 45%;
     }
@@ -2946,9 +2954,7 @@ h2.committee-title{
 .countdown-period{
   font-size: 10px !important;
 }
-#home{
-    height: 650px !important;
-  }
+
   #section-hero{
     height: 540px !important;
   }
