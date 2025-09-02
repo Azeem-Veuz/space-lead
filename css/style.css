@@ -2835,6 +2835,8 @@ color: rgba(0, 0, 0, .8) !important;
 width: 100%;
 position: absolute;
 top: 0;
+height: 100%;
+    object-fit: cover;
     }
 
     .pass-section::before{
