@@ -667,7 +667,7 @@ bottom: 0;
   padding-bottom: 100px;
 }
 
-.scale-in-mask img {
+.scale-in-mask video {
     width: 100%;
     object-fit: cover;
     height: 100%;
@@ -2820,7 +2820,6 @@ color: rgba(0, 0, 0, .8) !important;
 
 
     .pass-section {
-      background: url("../images/background/register-bg.gif") no-repeat ;
       color: #fff;
       font-family: "Inter", sans-serif;
       min-height: 80vh;
@@ -2832,10 +2831,17 @@ color: rgba(0, 0, 0, .8) !important;
       position: relative;
     }
 
+    .pass-section video{
+width: 100%;
+position: absolute;
+top: 0;
+    }
+
     .pass-section::before{
       content: "";
       width: 100%;
       height: 100%;
+      z-index: 1;
       background: #000;
       position: absolute;
       background: linear-gradient(0deg,rgba(28, 25, 45, 1) 35%, rgba(237, 240, 254, 0) 100%);
@@ -3717,7 +3723,7 @@ display: none;
     .committee-title{
       font-size: 24px;
     }
-     .scale-in-mask img{
+     .scale-in-mask video{
     height: 500px;
     width: 100%;
   }
@@ -3927,7 +3933,7 @@ display: none;
     height: 100%;
   }
 
-  .scale-in-mask img{
+  .scale-in-mask video{
     height: 500px;
     width: 100%;
   }
