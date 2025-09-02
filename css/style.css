@@ -248,7 +248,6 @@ ul{
     color: white;
     cursor: pointer;
     z-index: 1050;
-    writing-mode: sideways-lr; /* works on Safari */
     text-orientation: mixed;
     user-select: none;
     text-align: center;
@@ -257,6 +256,11 @@ ul{
     border: none;
     transition: background 0.3s;
     font-weight: 400;
+}
+
+#registerNowFixed span{
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
 }
 
 #registerNowFixed:hover {
