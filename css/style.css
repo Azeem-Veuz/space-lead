@@ -239,26 +239,24 @@ ul{
 
 /* Register Now button fixed */
 #registerNowFixed {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--main-gradient);
-  border-radius: 10px 0 0 10px;
-  padding: 20px 8px;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-  z-index: 1050;
-  writing-mode: sideways-lr;
-  text-orientation: mixed;
-  user-select: none;
-  text-align: center;
-  letter-spacing: 0.5px;
-  font-size: 0.9rem;
-  border: none;
-  transition: background 0.3s ease;
-  font-weight: 400;
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    background: var(--main-gradient);
+    border-radius: 10px 0px 0px 10px;
+    padding: 20px 8px;
+    color: white;
+    cursor: pointer;
+    z-index: 1050;
+    writing-mode: sideways-lr; /* works on Safari */
+    text-orientation: mixed;
+    user-select: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border: none;
+    transition: background 0.3s;
+    font-weight: 400;
 }
 
 #registerNowFixed:hover {
@@ -3601,6 +3599,9 @@ display: none;
   #section-hero{
     height: 540px !important;
   }
+
+  .hero-section {
+    min-height: 800px !important;}
 
   .contact-section2 .main-heading {
       font-size: 24px !important;
