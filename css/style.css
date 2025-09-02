@@ -3439,6 +3439,11 @@ h3.ticket-title {
     color: #000;
 }
 
+.iti__country-name {
+    margin-right: 6px;
+    color: #000;
+}
+
 
 /* Responsive */
 @media (max-width: 1199px) {
