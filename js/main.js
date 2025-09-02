@@ -157,73 +157,65 @@
             }
         });
 
-    // Counter Animation Function
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const increment = target / 50; // Adjust speed by changing divisor
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.ceil(current);
-                        setTimeout(updateCounter, 40); // Animation speed
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-                
-                updateCounter();
-            });
-        }
+// Counter Animation Function
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const increment = target / 50; // Adjust speed
+        let current = 0;
 
-        // Intersection Observer for triggering animation when in view
-        function setupIntersectionObserver() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounters();
-                        observer.disconnect(); // Run animation only once
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
-
-            const statsCard = document.querySelector('.stats-card');
-            if (statsCard) {
-                observer.observe(statsCard);
-            }
-        }
-
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check if Intersection Observer is supported
-            if ('IntersectionObserver' in window) {
-                setupIntersectionObserver();
+        const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                counter.textContent = Math.ceil(current);
+                setTimeout(updateCounter, 40); // Animation speed
             } else {
-                // Fallback: animate immediately if not supported
-                setTimeout(animateCounters, 500);
+                counter.textContent = target;
+            }
+        };
+
+        updateCounter();
+    });
+}
+
+// Reset counters to zero
+function resetCounters() {
+    document.querySelectorAll('.counter').forEach(counter => {
+        counter.textContent = '0';
+    });
+}
+
+// Intersection Observer for triggering animation each time in view
+function setupIntersectionObserver() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();  // Run when section is visible
+            } else {
+                resetCounters();    // Reset when section leaves viewport
             }
         });
+    }, {
+        threshold: 0.5
+    });
 
-        // Optional: Reset animation on window resize (for demo purposes)
-        let resizeTimer;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-                // Reset counters
-                document.querySelectorAll('.counter').forEach(counter => {
-                    counter.textContent = '0';
-                });
-                // Restart animation
-                setTimeout(animateCounters, 300);
-            }, 250);
-        });
+    const statsCard = document.querySelector('.stats-card');
+    if (statsCard) {
+        observer.observe(statsCard);
+    }
+}
 
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    if ('IntersectionObserver' in window) {
+        setupIntersectionObserver();
+    } else {
+        // Fallback: animate immediately if not supported
+        setTimeout(animateCounters, 500);
+    }
+});
                 // owl carousels
 // ---------------- Owl Carousel Init ----------------
 $(document).ready(function(){
