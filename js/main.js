@@ -23,6 +23,29 @@
             });
         });
 
+        function openVideoModal() {
+      const modal = document.getElementById("videoModal");
+      const video = document.getElementById("localVideo");
+      modal.style.display = "flex";
+      video.play(); // autoplay when opened
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById("videoModal");
+      const video = document.getElementById("localVideo");
+      modal.style.display = "none";
+      video.pause(); // stop video
+      video.currentTime = 0; // reset to start
+    }
+
+    // Close when clicking outside video
+    window.onclick = function(event) {
+      const modal = document.getElementById("videoModal");
+      if (event.target === modal) {
+        closeVideoModal();
+      }
+    }
+
         // Video background error handling
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.querySelector('.video-background video');
