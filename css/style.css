@@ -2963,7 +2963,7 @@ height: 100%;
     }
 
     .event-cards.active input[type="radio"]{
-      accent-color: #fff;
+      accent-color: var(--primary-bg);
 
     }
     .event-cards.conference {
