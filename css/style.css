@@ -1888,8 +1888,7 @@ footer li a {
     text-align: center;
     font-size: 24px;
     margin: 0 3px 0 3px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
+    
     color: #5AC0BE;
 }
 
