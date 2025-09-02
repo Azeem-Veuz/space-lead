@@ -1803,6 +1803,24 @@ h2.sponsor-title {
   transform: scale(1.1) ;
 }
 
+.box1{
+  background: #fff;
+       transform: skewX(10deg);
+    border-radius: 20px 30px;
+
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+.box1 img{
+    transform: skewX(-10deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
 /* footer */
 
 footer {
