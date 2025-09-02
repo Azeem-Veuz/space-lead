@@ -3665,6 +3665,14 @@ display: none;
         .iti__country-list {
         white-space: none;
     }
+    .box{
+      min-width: 100%;
+      margin: 0;
+    }
+
+    .box img{
+      height: 35px;
+    }
 }
 
 
