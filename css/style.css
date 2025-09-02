@@ -3642,6 +3642,7 @@ display: none;
 
     .countdown-item{
       height: 70px;
+      width: 70px;
     }
         .countdown-number {
         font-size: 1rem;
