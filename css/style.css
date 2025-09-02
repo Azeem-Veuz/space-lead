@@ -3434,6 +3434,11 @@ h3.ticket-title {
       margin-bottom: 20px;
     }
 
+    .select2-results__option[aria-selected] {
+    cursor: pointer;
+    color: #000;
+}
+
 
 /* Responsive */
 @media (max-width: 1199px) {
@@ -3646,6 +3651,10 @@ display: none;
     }
         .countdown-number {
         font-size: 1rem;
+    }
+
+        .iti__country-list {
+        white-space: none;
     }
 }
 
