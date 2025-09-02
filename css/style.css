@@ -1803,7 +1803,7 @@ h2.sponsor-title {
   transform: scale(1.1) ;
 }
 
-/* .box1{
+.box1{
   background: #fff;
        transform: skewX(10deg);
     border-radius: 20px 30px;
@@ -1811,6 +1811,7 @@ h2.sponsor-title {
     height: 100px;
     margin: auto;
     position: relative;
+    margin: 10px 0;
 }
 .box1 img{
     transform: skewX(-10deg);
@@ -1818,8 +1819,9 @@ h2.sponsor-title {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 35%;
 
-} */
+}
 
 /* footer */
 
@@ -3745,6 +3747,9 @@ display: none;
 
   .banner-content h1 {
     font-size: 28px;
+}
+.sponsorship-section::before, .sponsorship-section::after{
+  display: none;
 }
 
 .banner-content .btn-line {
