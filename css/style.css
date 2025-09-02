@@ -3038,6 +3038,7 @@ height: 100%;
     .badge-preview {
       position: sticky;
   top: 100px;
+  width: 100%;
     }
     
     .shape-free{
@@ -3634,6 +3635,17 @@ display: none;
     .custom-tabs{
       justify-content: center;
     }
+
+    .countdown-label{
+      font-size: 0.7rem;
+    }
+
+    .countdown-item{
+      height: 70px;
+    }
+        .countdown-number {
+        font-size: 1rem;
+    }
 }
 
 
@@ -3818,6 +3830,9 @@ display: none;
       position: unset;
       min-width: 45%;
     }
+
+    .event-price {
+    font-size: 12px;}
 
   
 
