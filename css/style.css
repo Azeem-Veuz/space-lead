@@ -303,6 +303,23 @@ ul{
   margin: 0 0.5rem;
   transition: color 0.3s ease;
   font-size: 14px;
+  position: relative;
+  padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* underline position */
+  width: 0;
+  height: 2px; /* underline thickness */
+ background: var(--main-gradient);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* animate underline left → right */
 }
 
 .main-nav {
@@ -312,7 +329,7 @@ ul{
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--accent-cyan) !important;
+  color: var(--secondary-color) !important;
 }
 
 .btn-register {
