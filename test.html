@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Areas</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 40px;
+  font-family: Calibri, Segoe, "Segoe UI", sans-serif;
+  background: #0a0f2c;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.tree, .tree ul {
+  padding: 0;
+  margin-left: 100px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.tree ul {
+  margin-top: 30px;
+}
+
+.tree li {
+  position: relative;
+  text-align: left;
+  margin: 20px;
+}
+
+/* Node box */
+.tree span {
+  display: inline-block;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  min-width: 160px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tree span:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Vertical connector for ALL nodes (existing code) */
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Horizontal connector (existing code) */
+.tree .first-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 42%;
+    right: 50%;
+    transform: translatex(-50%);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 597px;
+}
+
+.tree .second-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 26%;
+    right: 50%;
+    transform: translatex(-50%);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 357px;
+}
+
+/* Remove connector for root (existing code) */
+.tree > li::before,
+.tree > li > span::before {
+  display: none;
+}
+
+/* NEW: Connect the parent span to the child ul */
+.tree .tree1 > .tree1-main::after {
+  content: "";
+  position: absolute;
+  top: 42px; /* Position the line below the span */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 144px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive (existing code) */
+@media (max-width: 1199px) {
+  .tree, .tree ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tree ul::before {
+    display: none;
+  }
+  .tree li::before {
+    left: 50%;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <h1>Focus Areas</h1>
+
+  <ul class="tree">
+    <!-- Left branch -->
+    <li class="tree1">
+      <span class="tree1-main">Space & Advanced Engineering</span>
+      <ul class="first-row">
+        <li><span>Aerospace Engineering</span></li>
+        <li><span>Robotics</span></li>
+        <li><span>Space Applications</span></li>
+      </ul>
+      <ul class="second-row">
+        <li><span>Energy & Power Systems</span></li>
+        <li><span>Life Support Systems</span></li>
+      </ul>
+    </li>
+
+   
+  </ul>
+
+</body>
+</html>

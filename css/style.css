@@ -3,6 +3,7 @@
 @import url("https://db.onlinewebfonts.com/c/42954fca42bd1f687f736468d1cdcd3e?family=Azonix");
 @import url("https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 
@@ -866,6 +867,20 @@ bottom: 0;
   padding: 150px 0 100px 0;
   position: relative;
   overflow: hidden;
+}
+
+h5.scientific-member-name{
+  color: #fff !important;
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+}
+
+.committee-card img.scientific-member-img{
+  width: auto !important;
+}
+
+.scientific-member .committee-card{
+  display: block !important;
 }
 
 .committee-section .video-bg {
@@ -1827,7 +1842,7 @@ h2.sponsor-title {
 
 footer {
   color: var(--body-font-color-dark);
-  background-color: var(--primary-bg);
+  background-color: #000000;
   padding: 100px 20px 0 20px;
   position: relative;
   overflow: hidden;
@@ -4036,4 +4051,569 @@ display: none;
 }
  
 }
+
+/* why register */
+
+.why-register-today{
+  background-color: #EDF0FE;
+}
+
+.why-register-today .register-section {
+            padding: 60px 40px;
+            margin: 0 auto;
+        }
+
+        .why-register-today .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .why-register-today .register-badge {
+            font-size: 16px;
+    font-weight: 500;
+    color: #4dd0e1;
+    margin-bottom: 10px;
+    font-family: "Orbitron", sans-serif;
+        }
+
+       .why-register-today  .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0;
+            line-height: 1.2;
+            font-family: "Orbitron", sans-serif;
+        }
+
+        /* Media Object Custom Styles */
+        .why-register-today .feature-media {
+            background: linear-gradient(90deg,rgba(90, 192, 190, 0) 0%, rgba(90, 192, 190, 0.07) 100%);
+            padding: 30px 25px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .why-register-today .feature-media:hover {
+            transform: translateY(-5px);
+        }
+
+        .why-register-today .feature-media:last-child {
+            margin-bottom: 0;
+        }
+
+        .why-register-today .feature-number {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #5AC0BE;
+            line-height: 1;
+            min-width: 80px;
+            flex-shrink: 0;
+        }
+
+        .why-register-today .media-body .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000;
+            line-height: 1.3;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .why-register-today .media-body .feature-description {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Two column layout for larger screens */
+        .why-register-today .media-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+           .why-register-today  .features-container {
+                display: flex;
+                gap: 30px;
+            }
+
+            .why-register-today .media-column {
+                flex: 1;
+            }
+
+            .why-register-today .feature-media {
+                margin-bottom: 30px;
+            }
+
+            .why-register-today .feature-media:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .why-register-today .register-section {
+                margin: 20px;
+                padding: 40px 25px;
+            }
+
+            .why-register-today .main-title {
+                font-size: 2rem;
+            }
+
+            .why-register-today .feature-media {
+                padding: 25px 20px;
+                margin-bottom: 20px;
+            }
+
+            .why-register-today .feature-number {
+                font-size: 2rem;
+                margin-right: 20px;
+                min-width: 60px;
+            }
+
+            .why-register-today .media-body .feature-title {
+                font-size: 1.1rem;
+            }
+            .why-register-today.conference .bg-shape.bottom-right{
+              display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            
+
+            .why-register-today .register-section {
+                margin: 15px;
+                padding: 30px 20px;
+            }
+
+            .why-register-today .main-title {
+                font-size: 1.75rem;
+            }
+
+            .feature-media {
+                padding: 20px 15px;
+            }
+
+            .why-register-today .feature-number {
+                font-size: 1.8rem;
+                margin-right: 15px;
+                min-width: 50px;
+            }
+
+            .why-register-today .media-body .feature-title {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .why-register-today .media-body .feature-description {
+                font-size: 0.9rem;
+            }
+
+            /* Stack number above content on very small screens */
+            .why-register-today .d-flex {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .why-register-today .feature-number {
+                margin-right: 0;
+                margin-bottom: 15px;
+                min-width: auto;
+            }
+        }
+
+
+        /* voices section */
+
+        .voices .section-title {
+      color: #000;
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 60px;
+      line-height: 1.2;
+                  font-family: "Orbitron", sans-serif;
+
+    }
+
+    .voices .voice-card {
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(26, 26, 26, 0.2);
+      position: relative;
+      overflow: hidden;
+      height: 100%; 
+    }
+
+  
+
+    
+    .voices .voice-card:hover {
+            transform: translateY(-5px);
+
+      background: rgba(0, 0, 0);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+   
+
+    .voices .icon-container {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      
+    }
+
+    
+
+    .voices .voice-title {
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      line-height: 1.3;
+            font-family: "Roboto", sans-serif;
+
+    }
+
+    .voices .voice-card:hover .voice-title {
+      color: #ffffff;
+    }
+
+    .voices .voice-description {
+      color: #878787;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+            font-family: "Roboto", sans-serif;
+
+    }
+
+    /* Animation for cards */
+    .voices .voice-card {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .voices .voice-card:nth-child(1) { animation-delay: 0.1s; }
+    .voices .voice-card:nth-child(2) { animation-delay: 0.2s; }
+    .voices .voice-card:nth-child(3) { animation-delay: 0.3s; }
+    .voices .voice-card:nth-child(4) { animation-delay: 0.4s; }
+    .voices .voice-card:nth-child(5) { animation-delay: 0.5s; }
+    .voices .voice-card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* conference */
+
+    .why-register-today.conference{
+      background-color: #1C192D;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 0 !important;
+    
+
+    }
+
+    .why-register-today.conference  .main-title{
+      color: #ffffff !important;
+    }
+
+    .why-register-today.conference .feature-media{
+      background: linear-gradient(90deg,rgba(208, 24, 184, 0) 0%, rgba(208, 24, 184, 0.08) 100%);
+    }
+
+    .why-register-today.conference .media-body .feature-title{
+      color: #ffffff !important;
+    }
+
+    .why-register-today.conference .feature-number{
+      color: #D018B8;
+    }
+
+    .why-register-today.conference .bg-shape{
+      position: absolute;
+    }
+
+    .why-register-today.conference .bg-shape.top-left {
+      top: 50px;
+      left: 0;
+      width: 100px; /* adjust as needed */
+    }
+
+    .why-register-today.conference .bg-shape.bottom-right {
+      bottom: -100px;
+      right: 0;
+      width: 250px; /* adjust as needed */
+    }
+
+    /* CTA Section */
+    .why-register-today.conference .cta-section {
+      position: relative;
+      background: url('/images/conference/cta.png') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+     .why-register-today.conference .cta-overlay {
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .why-register-today.conference .cta-overlay h3 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+        font-family: "Gilroy-Regular", sans-serif;
+
+    }
+
+    .why-register-today.conference .btn-cta {
+      background: var(--main-gradient);
+      border: none;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 50px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .why-register-today.conference .btn-cta:hover {
+      opacity: 0.9;
+    }
+
+
+    /* chart */
+
+
+    .tree, .tree ul {
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.tree ul {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.tree2 ul {
+  margin-top: 30px;
+  margin-right: 100px;
+  margin-left: 0;
+}
+
+.tree li {
+  position: relative;
+  text-align: left;
+  margin: 20px;
+}
+
+.tree2{
+  direction: rtl;
+}
+.tree2 li {
+  text-align: right;
+  margin: 20px;
+}
+
+/* Node box */
+.tree span {
+  display: inline-block;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  min-width: 160px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.tree img{
+  width: 20px;
+  margin-right: 5px;
+}
+
+.tree1-main{
+  display: inline-block;
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #7F529F;
+  position: relative;
+}
+
+.tree2 .tree1-main{
+    border-bottom: 1px solid #90D3D0;
+
+}
+
+/* Vertical connector for ALL nodes (existing code) */
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background: #7F529F;
+}
+
+.tree2 li::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background: #90D3D0;
+}
+
+/* Horizontal connector (existing code) */
+.tree .first-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 278px;
+    right: 50%;
+    transform: translatex(-50%);
+    height: 1px;
+    background: #7F529F;
+    width: 585px;
+}
+.tree2 .first-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -350px;
+    left: 50%;
+    transform: translatex(-50%);
+    height: 1px;
+    background: #90D3D0;
+    width: 667px;
+}
+
+.tree2 .first-row li span, .tree2 .second-row li span{
+  direction: ltr;
+}
+
+.tree .second-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 182px;
+    right: 50%;
+    transform: translatex(-50%);
+    height: 1px;
+    background: #7F529F;
+    width: 398px;
+}
+.tree2 .second-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -235px;
+    left: 50%;
+    transform: translatex(-50%);
+    height: 1px;
+    background: #90D3D0;
+    width: 440px;
+}
+
+/* Remove connector for root (existing code) */
+.tree > li::before,
+.tree > li > span::before {
+  display: none;
+}
+
+/* NEW: Connect the parent span to the child ul */
+.tree1-main::after {
+  content: "";
+  position: absolute;
+  top: 60px; /* Position the line below the span */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+
+  height: 147px;
+      background: #7F529F ;
+
+}
+
+.tree2 .tree1-main::after{
+    background: #90D3D0 !important;
+    content: "";
+  position: absolute;
+  top: 60px; /* Position the line below the span */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+
+  height: 147px;
+
+}
+
+/* Responsive (existing code) */
+@media (max-width: 1199px) {
+
+  .tree1-main{
+    display: flex;
+    justify-content: center;
+  }
+  .tree, .tree ul {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .tree2 ul{
+margin-right: 0;
+  }
+  .tree ul::before {
+    display: none;
+  }
+  .tree li::before {
+    left: 50%;
+  }
+  .tree .tree1 > .tree1-main::after{
+    display: none;
+  }
+
+  ul.second-row{
+    margin-top: 0;
+  }
+  .tree2 ul.second-row{
+    margin-top: 20px;
+  }
+  .tree2 ul.first-row{
+    margin-top: 0;
+  }
+}
+
+h3.flow-cart-heading{
+  font-family: "Orbitron", sans-serif !important;
+  color: #ffffff !important;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 40px;
+}
+    
 
