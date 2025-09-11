@@ -1223,7 +1223,7 @@ p.event-description {
   border-radius: 50px;
 }
 .agenda-container {
-  background: rgba(28, 25, 45, 0.5);
+  background: rgba(28, 25, 45, 0.8);
   border-radius: 20px;
   padding: 3rem;
 
@@ -1949,13 +1949,18 @@ footer li a {
 .feature-item-list {
     display: flex
 ;
-    align-items: center;
-    color: var(--text-white);
-    font-size: 16px;
+    align-items: start;
+    color: #B3B3B3;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 0.8rem;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+.feature-item-list b{
+        color: #fff;
+
 }
 
 .feature-item-list:hover {
