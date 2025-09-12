@@ -4,6 +4,8 @@
 @import url("https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 
@@ -633,16 +635,32 @@ bottom: 0;
   right: 20px;
   background-color: var(--primary-color);
   color: white;
-  border: none;
-  width: 50px;
-  height: 50px;
+  border: 1px solid transparent; /* Space for gradient border */
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: none;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   transition: all 0.3s ease;
   z-index: 1000;
+  background-clip: padding-box; /* Keeps background inside border */
+}
+
+.back-to-top::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Fill parent */
+  border-radius: 50%;
+  padding: 2px; /* Border thickness */
+  background: linear-gradient(90deg, rgba(90, 192, 190, 1) 0%, rgba(127, 82, 159, 1) 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
 }
 
 .back-to-top:hover {
@@ -1574,7 +1592,8 @@ a.download{
 }
 .event-details-btn:hover
  {
-    background: #693fa5;
+    background: var(--main-gradient);
+     transition:  0.3s ease;
 }
 .event-details-btn:hover i {
     transform: rotate(90deg);
@@ -1686,8 +1705,30 @@ a.download{
 }
 
 .sponsorship-section{
-    background: url("../images/sponsors/sponsorlist_bg.png")no-repeat center center;
+    background: url("../images/sponsors/sponsorlist_bg.png")no-repeat top center;
   background-size: cover;
+
+}
+
+.sponsorship-section2{
+      background: url("../images/sponsors/logo-bg.png")no-repeat top center;
+
+}
+.sponsorship-section2::before{
+content: "";
+  
+  width: 100%;
+  height: 100%;
+ background: linear-gradient(180deg,rgba(237, 240, 254, 0) 0%, rgba(237, 240, 254, 1) 80%);
+ z-index: 0;
+}
+
+.sponsorship-section2::after, .sponsorship-section3::after, .sponsorship-section3::before{
+  background: none;
+}
+
+.sponsorship-section h2.main-heading, .all-sponsors h2.main-heading, .package-benefits h2.main-heading{
+             font-family: "Raleway", sans-serif !important;
 
 }
 
@@ -2007,7 +2048,7 @@ footer li a {
 
     .date-card-teal {
      background: linear-gradient(177deg,rgba(90, 192, 190, 1) 0%, rgba(42, 90, 89, 1) 100%);
-      left: 30%;
+      left: 50%;
       right: 50%;
       transform: translate(-50%, -50%);
     }
@@ -2015,9 +2056,17 @@ footer li a {
     .date-card-purple {
       background: linear-gradient(177deg,rgba(127, 82, 159, 1) 0%, rgba(46, 29, 57, 1) 100%);
       right: 100px;
-      top: 200px;
+      top: 180px;
       
 
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px) {
+       .date-card-purple {
+      right: 0;
+      
+
+    }
     }
     .date-card-purple .date-number{
       color: rgba(90, 192, 190, 1);
@@ -2033,7 +2082,7 @@ footer li a {
       line-height: 1;
       margin-bottom: 0.5rem;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      font-family: var(--heading-font);
+        font-family: "Azonix", sans-serif;
       
     }
 
@@ -4509,12 +4558,12 @@ display: none;
     content: "";
     position: absolute;
     top: 0;
-    right: -350px;
+    right: -381px;
     left: 50%;
     transform: translatex(-50%);
     height: 1px;
     background: #90D3D0;
-    width: 667px;
+    width: 688px;
 }
 
 .tree2 .first-row li span, .tree2 .second-row li span{
@@ -4536,12 +4585,12 @@ display: none;
     content: "";
     position: absolute;
     top: 0;
-    right: -235px;
+    right: -267px;
     left: 50%;
     transform: translatex(-50%);
     height: 1px;
     background: #90D3D0;
-    width: 440px;
+    width: 460px;
 }
 
 /* Remove connector for root (existing code) */
@@ -4620,5 +4669,268 @@ h3.flow-cart-heading{
   font-size: 4rem;
   margin-top: 40px;
 }
+
+
+/* profile card */
+
+ .profile-card {
+            background-color: #2c2c2c;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 0 auto;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: start;
+            position: relative;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: white;
+            font-family: var(--body-font);
+        }
+
+        .profile-title {
+            font-size: 14px;
+            color: #4DE3ED;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 80%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            z-index: 11;
+        }
+
+        .qr-section {
+           position: absolute; 
+            margin-bottom: 20px;
+            right: 0;
+            background-color: #5AC0BE;
+            border-radius: 0 5px 5px 0;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            padding: 2px;
+        }
+
+        .profile-qr-code {
+            width: 70px;
+            height: 65px;
+           float: right;
+            padding: 4px;
+        }
+
+        .profile-qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-placeholder {
+            width: 100%;
+            height: 100%;
+           
+        }
+
+        
+
+       .connect-text {
+    font-size: 12px;
+    color: #fff;
+    margin: 0;
+    text-align: right;
+}
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-profile {
+            background-color: #404040;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+
+       
+
+        .btn-connect {
+            border: none;
+                        background-color: #404040;
+
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+
+       
+        .action-buttons .btn i{
+          transform: rotate(45deg);
+          transition: transform .3s ease;
+        }
+
+        .action-buttons .btn:hover{
+           background-color: #505050;
+            color: white;
+        }
+        .action-buttons .btn:hover i{
+          transform: rotate(90deg);
+        }
+
+        /* sponsors corrections */
+
+        .custom-card {
+      background-color: #F2F5FE; /* light background like in image */
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+            border: 1px solid #fff;
+                        
+
+
+    }
+    .custom-card h5 {
+      font-weight: 500;
+      color: #111111CC;
+      margin-bottom: 15px;
+       font-family: "Poppins", sans-serif;
+       font-size: 20px;
+    }
+    .custom-card p {
+      font-size: 12px;
+      color: #7F529F; /* purple text */
+      margin: 0;
+       font-family: "Poppins", sans-serif;
+    }
+    .custom-card img{
+      margin-bottom: 15px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .right-content-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .right-content-section .btn-gradient{
+      width: 210px;
+    }
+
+    .right-content-section h2.sponsor-title{
+           font-family: "Raleway", sans-serif;
+             font-weight: 600;
+             font-size: 48px;
+
+    }
+
+    .plan-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .plan-card span {
+      font-weight: 500;
+      color: #222;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+             font-family: "Poppins", sans-serif;
+             font-size: 24px;
+
+    }
+    .plan-card img {
+      width: 60px;
+      height: 60px;
+      transition: filter 0.3s ease;
+    }
+    /* Hover Effect */
+    .plan-card:hover {
+      background-color: #5AC0BE; /* Bootstrap green */
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.15);
+    }
+    .plan-card:hover span {
+      color: #fff;
+    }
+    .plan-card:hover img {
+      filter: brightness(0) invert(1); /* makes SVG/PNG white */
+    }
+
+    /* filter  */
+
+     /* Tabs */
+
+     .agenda-filter-wrap{
+      background: rgba(255, 255, 255, 0.06);
+    border-radius: 15px;
+    padding: 2rem;
+     }
+  .agenda-filter-tabs {
+    display:flex;
+    gap:0.75rem;
+    justify-content:flex-start; /* or center */
+    align-items:center;
+    flex-wrap:wrap;
+  }
+  .agenda-filter-tab {
+    background: rgba(255,255,255,0.04);
+    color:#e8e8ee;
+    padding:2px 25px;
+    border-radius:24px;
+    font-weight:600;
+    cursor:pointer;
+    transition: all .22s ease;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+  .agenda-filter-tab span{
+    text-align: left;
+    font-weight: 400;
+  }
+  .agenda-filter-tab:hover { transform: translateY(-3px); }
+  .agenda-filter-tab.active {
+  border: 1px solid #5A8CA4;
+}
+
+
+/* Default: show all events */
+.event-card { display: block; }
+
+/* Hide when JS filtering applies */
+.event-card.hidden { display: none; }
+
     
 

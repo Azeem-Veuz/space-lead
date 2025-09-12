@@ -376,6 +376,58 @@ $(document).ready(function(){
     });
 
 
+    // filter tab
+
+     
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".agenda-filter-tab");
+  const events = document.querySelectorAll(".event-card");
+
+  // filter click
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      const filter = this.getAttribute("data-filter");
+
+      // active tab highlight
+      this.closest(".agenda-filter-tabs").querySelectorAll(".agenda-filter-tab")
+        .forEach(t => t.classList.remove("active"));
+      this.classList.add("active");
+
+      // filter logic (only within the same tab-pane)
+      const currentPane = this.closest(".tab-pane");
+      currentPane.querySelectorAll(".event-card").forEach(ev => {
+        const cat = ev.getAttribute("data-category") || "";
+        if (cat === filter) {
+          ev.classList.remove("hidden");
+        } else {
+          ev.classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // reset filters when switching Day tabs
+  const dayTabs = document.querySelectorAll('[data-bs-toggle="tab"]');
+  dayTabs.forEach(dayTab => {
+    dayTab.addEventListener("shown.bs.tab", function (e) {
+      const targetPane = document.querySelector(this.getAttribute("data-bs-target"));
+
+      // show all events inside this tab
+      targetPane.querySelectorAll(".event-card").forEach(ev => {
+        ev.classList.remove("hidden");
+      });
+
+      // reset filter buttons in this tab
+      const filterTabs = targetPane.querySelectorAll(".agenda-filter-tab");
+      filterTabs.forEach(ft => ft.classList.remove("active"));
+    });
+  });
+});
+
+
+
+
+
     // accordion
 
 
