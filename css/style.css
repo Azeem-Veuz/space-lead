@@ -4934,3 +4934,22 @@ h3.flow-cart-heading{
 
     
 
+@media  (max-width: 992px) {
+  .agenda-filter-wrap{
+    padding: 10px;
+  }
+  .agenda-filter-tab{
+    padding: 2px 10px;
+  }
+  .agenda-filter-tabs {
+ 
+    justify-content: center;
+    
+}
+.agenda-filter-tab span{
+  font-size: 12px;
+}
+.agenda-filter-tab img{
+  width: 32px;
+}
+}
