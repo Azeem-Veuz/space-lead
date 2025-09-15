@@ -122,55 +122,74 @@
          <section class="agenda-section">
             <div class="container">
             <div class="tab-section">
-                        <div class="agenda-container">
-                            <!-- Header -->
-                            <div class="row">
-                                <div class="col-lg-7 col-md-6 col-12">
-                                    <h6 class="event-agenda-label">EVENT AGENDA</h6>
-                                    <h1 class="main-title2">FOLLOW EVENT AGENDA</h1>
-                                </div>
-
-                                <!-- Custom Tabs -->
-                                <div class="col-lg-5 col-md-6 col-12">
-                                    <ul class="nav custom-tabs" id="dayTabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="custom-tab active" id="day01-tab" data-bs-toggle="tab"
-                                                data-bs-target="#day01" type="button" role="tab">
-                                                <div class="day-title">Day 01</div>
-                                                <div class="day-date">09 Nov 2025</div>
-                                            </button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="custom-tab" id="day02-tab" data-bs-toggle="tab"
-                                                data-bs-target="#day02" type="button" role="tab">
-                                                <div class="day-title">Day 02</div>
-                                                <div class="day-date">10 Nov 2025</div>
-                                            </button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="custom-tab" id="day03-tab" data-bs-toggle="tab"
-                                                data-bs-target="#day03" type="button" role="tab">
-                                                <div class="day-title">Day 03</div>
-                                                <div class="day-date">11 Nov 2025</div>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="agenda-container">
+                        <!-- Header -->
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <h6 class="event-agenda-label">EVENT AGENDA</h6>
+                                <h1 class="main-title2">FOLLOW EVENT AGENDA</h1>
                             </div>
 
-                            <!-- Tab Content -->
-                            <div class="tab-content" id="dayTabsContent">
-                                <!-- Day 01 Content -->
-                                <div class="tab-pane fade show active" id="day01" role="tabpanel">
+                            <!-- Custom Tabs -->
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <ul class="nav custom-tabs" id="dayTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="custom-tab active" id="day01-tab" data-bs-toggle="tab"
+                                            data-bs-target="#day01" type="button" role="tab">
+                                            <div class="day-title">Day 01</div>
+                                            <div class="day-date">09 Nov 2025</div>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="custom-tab" id="day02-tab" data-bs-toggle="tab"
+                                            data-bs-target="#day02" type="button" role="tab">
+                                            <div class="day-title">Day 02</div>
+                                            <div class="day-date">10 Nov 2025</div>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="custom-tab" id="day03-tab" data-bs-toggle="tab"
+                                            data-bs-target="#day03" type="button" role="tab">
+                                            <div class="day-title">Day 03</div>
+                                            <div class="day-date">11 Nov 2025</div>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="dayTabsContent">
+
+                            <!-- Tabs -->
+
+                            <!-- Day 01 Content -->
+                            <div class="tab-pane fade show active" id="day01" role="tabpanel">
+
+                                <!-- Filter Tabs (custom) -->
+                                <div class="agenda-filter-wrap mb-4">
+                                    <div class="agenda-filter-tabs">
+                                        <button type="button" class="agenda-filter-tab active"
+                                            data-filter="conference"><img src="images/agenda/conference-schedule.svg"
+                                                alt=""><span>Conference <br> Schedule</span></button>
+                                        <button type="button" class="agenda-filter-tab" data-filter="program"><img
+                                                src="images/agenda/program-track-agenda.svg" alt=""> <span>Program
+                                                <br>Tracks Agenda</span></button>
+                                        <button type="button" class="agenda-filter-tab" data-filter="workshop"><img
+                                                src="images/agenda/workshops-agenda.svg" alt=""><span>Workshops <br>
+                                                Agenda</span></button>
+                                    </div>
+                                </div>
+
+                                <div class="agenda-events" data-aos="zoom-in-up" data-aos-duration="2000">
                                     <!-- Event 1 -->
-                                    <div class="event-card" data-aos="zoom-in-up" data-aos-duration="3000">
+                                    <!-- Event Card -->
+                                    <div class="event-card" data-category="conference">
                                         <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-4">
-                                                <div class="event-image"
-                                                >
-                                                    <img src="images/agenda/agenda-1.png" alt="">
-                                                </div>
-                                            </div>
+
+
+
+                                            <!-- Event Content -->
                                             <div class="event-content col-lg-8">
                                                 <div class="row">
                                                     <div class="col-lg-6">
@@ -180,83 +199,171 @@
                                                         <div class="event-meta">
                                                             <div class="meta-item">
                                                                 <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
+                                                                    <img src="images/icons/time.svg" alt="Time icon">
                                                                 </div>
                                                                 <span>10:00 AM To 09 PM - 09 Nov 2025</span>
                                                             </div>
                                                             <div class="meta-item">
                                                                 <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
+                                                                    <img src="images/icons/event-location.svg"
+                                                                        alt="Location icon">
                                                                 </div>
                                                                 <span>HALL - 01</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <p class="event-description">
                                                     Lorem Ipsum is simply dummy text of the printing and typesetting
                                                     industry. Lorem Ipsum has been the industry's standard dummy text
                                                     ever since the 1500s, when an unknown printer took a galley of type
                                                     and scrambled it to make a type specimen book.
                                                 </p>
-
                                             </div>
-
-
                                         </div>
+
+                                        <!-- Speakers -->
                                         <div class="col-12">
                                             <div class="speakers-row mt-4">
+
+                                                <!-- Speaker 1 -->
                                                 <div class="speaker-card">
                                                     <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="John D. Alexon profile photo">
                                                     </div>
                                                     <div class="speaker-info">
                                                         <h5>John D. Alexon</h5>
                                                         <span class="speaker-role">
                                                             <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
+                                                                <img src="images/icons/event-agenda-mike.svg"
+                                                                    alt="Role icon">
                                                             </div>
                                                             <p>Moderator</p>
                                                         </span>
                                                     </div>
                                                 </div>
+
+                                                <!-- Speaker 2 -->
                                                 <div class="speaker-card">
                                                     <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="Jane Smith profile photo">
                                                     </div>
                                                     <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
+                                                        <h5>Jane Smith</h5>
                                                         <span class="speaker-role">
-
-                                                            <p>Moderator</p>
+                                                            <p>Design Expert</p>
                                                         </span>
                                                     </div>
                                                 </div>
+
+                                                <!-- Speaker 3 -->
                                                 <div class="speaker-card">
                                                     <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="Michael Lee profile photo">
                                                     </div>
                                                     <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
+                                                        <h5>Michael Lee</h5>
                                                         <span class="speaker-role">
-
-                                                            <p>Moderator</p>
+                                                            <p>Keynote Speaker</p>
                                                         </span>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- Event 2 -->
-                                    <div class="event-card" data-aos="zoom-in-up" data-aos-duration="3000">
+                                    <div class="event-card" data-category="program">
                                         <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-4">
-                                                <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-2.png" alt="">
+
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Sparkle & Shine on <br>
+Celebrations</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg" alt="">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3 -->
+
+                                    <div class="event-card" data-category="workshop">
+                                        <div class="row p-3 event-image-card">
+
                                             <div class="event-content col-lg-8">
                                                 <div class="row">
                                                     <div class="col-lg-6">
@@ -334,620 +441,577 @@
                                         </div>
                                     </div>
 
-                                    <!-- 3 -->
-
-                                    <div class="event-card" data-aos="zoom-in-up" data-aos-duration="3000">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-4">
-                                                <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-1.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="event-content col-lg-8">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Day 02 Content -->
-                                <div class="tab-pane fade" id="day02" role="tabpanel">
-                                    <!-- 1 -->
-                                    <div class="event-card">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-3">
-                                                <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-2.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="event-content col-lg-9">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 2 -->
-                                    <div class="event-card">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-3">
-                                                <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-1.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="event-content col-lg-9">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 3 -->
-                                    <div class="event-card">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-3">
-                                               <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-2.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="event-content col-lg-9">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Day 03 Content -->
-                                <div class="tab-pane fade" id="day03" role="tabpanel">
-                                    <!-- 1 -->
-                                    <div class="event-card">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-3">
-                                                <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-1.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="event-content col-lg-9">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 2 -->
-                                    <div class="event-card">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-3">
-                                                <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-2.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="event-content col-lg-9">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 3 -->
-                                    <div class="event-card">
-                                        <div class="row p-3 event-image-card">
-                                            <div class="event-image-container col-lg-3">
-                                               <div class="event-image"
-                                                    >
-                                                     <img src="images/agenda/agenda-1.png" alt="">
-                                                </div>
-                                                 
-                                            </div>
-                                            <div class="event-content col-lg-9">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h3>Events That Leave a <br> Impression</h3>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="event-meta">
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/time.svg" alt="">
-                                                                </div>
-                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <div class="meta-icon">
-                                                                    <img src="images/icons/event-location.svg" alt="">
-                                                                </div>
-                                                                <span>HALL - 01</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="event-description">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500s, when an unknown printer took a galley of type
-                                                    and scrambled it to make a type specimen book.
-                                                </p>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="speakers-row mt-4">
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-                                                            <div class="role-icon">
-                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
-                                                            </div>
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="speaker-card">
-                                                    <div class="speaker-avatar">
-                                                        <img src="images/team/moderator.png" alt="">
-                                                    </div>
-                                                    <div class="speaker-info">
-                                                        <h5>John D. Alexon</h5>
-                                                        <span class="speaker-role">
-
-                                                            <p>Moderator</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
-                            <div class="text-center mt-5">
-                                <a class="btn-main py-3 px-5 agenda-list-btn" href="tickets-2.html"><span>View Agenda
-                                        List</span> <img src="images/icons/right-arrow.svg" alt=""></a>
+                            <!-- Day 02 Content -->
+                            <div class="tab-pane fade" id="day02" role="tabpanel">
+                                <!-- Filter Tabs (custom) -->
+                                 <div class="agenda-filter-wrap mb-4">
+                                    <div class="agenda-filter-tabs">
+                                        <button type="button" class="agenda-filter-tab active"
+                                            data-filter="conference"><img src="images/agenda/conference-schedule.svg"
+                                                alt=""><span>Conference <br> Schedule</span></button>
+                                        <button type="button" class="agenda-filter-tab" data-filter="program"><img
+                                                src="images/agenda/program-track-agenda.svg" alt=""> <span>Program
+                                                <br>Tracks Agenda</span></button>
+                                        <button type="button" class="agenda-filter-tab" data-filter="workshop"><img
+                                                src="images/agenda/workshops-agenda.svg" alt=""><span>Workshops <br>
+                                                Agenda</span></button>
+                                    </div>
+                                </div>
+
+                                <div class="agenda-events" data-aos="zoom-in-up" data-aos-duration="2000">
+                                    <!-- Event 1 -->
+                                    <!-- Event Card -->
+                                    <div class="event-card" data-category="conference">
+                                        <div class="row p-3 event-image-card">
+
+
+
+                                            <!-- Event Content -->
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Events That Leave a <br> Impression</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="Time icon">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg"
+                                                                        alt="Location icon">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Speakers -->
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+
+                                                <!-- Speaker 1 -->
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="John D. Alexon profile photo">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg"
+                                                                    alt="Role icon">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Speaker 2 -->
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="Jane Smith profile photo">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>Jane Smith</h5>
+                                                        <span class="speaker-role">
+                                                            <p>Design Expert</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Speaker 3 -->
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="Michael Lee profile photo">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>Michael Lee</h5>
+                                                        <span class="speaker-role">
+                                                            <p>Keynote Speaker</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Event 2 -->
+                                    <div class="event-card" data-category="program">
+                                        <div class="row p-3 event-image-card">
+
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Sparkle & Shine on <br>
+Celebrations</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg" alt="">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3 -->
+
+                                    <div class="event-card" data-category="workshop">
+                                        <div class="row p-3 event-image-card">
+
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Events That Leave a <br> Impression</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg" alt="">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Day 03 Content -->
+                            <div class="tab-pane fade" id="day03" role="tabpanel">
+                                <!-- Filter Tabs (custom) -->
+                                 <div class="agenda-filter-wrap mb-4">
+                                    <div class="agenda-filter-tabs">
+                                        <button type="button" class="agenda-filter-tab active"
+                                            data-filter="conference"><img src="images/agenda/conference-schedule.svg"
+                                                alt=""><span>Conference <br> Schedule</span></button>
+                                        <button type="button" class="agenda-filter-tab" data-filter="program"><img
+                                                src="images/agenda/program-track-agenda.svg" alt=""> <span>Program
+                                                <br>Tracks Agenda</span></button>
+                                        <button type="button" class="agenda-filter-tab" data-filter="workshop"><img
+                                                src="images/agenda/workshops-agenda.svg" alt=""><span>Workshops <br>
+                                                Agenda</span></button>
+                                    </div>
+                                </div>
+
+                                <div class="agenda-events" data-aos="zoom-in-up" data-aos-duration="2000">
+                                    <!-- Event 1 -->
+                                    <!-- Event Card -->
+                                    <div class="event-card" data-category="conference">
+                                        <div class="row p-3 event-image-card">
+
+
+
+                                            <!-- Event Content -->
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Events That Leave a <br>
+Impression</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="Time icon">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg"
+                                                                        alt="Location icon">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Speakers -->
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+
+                                                <!-- Speaker 1 -->
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="John D. Alexon profile photo">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg"
+                                                                    alt="Role icon">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Speaker 2 -->
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="Jane Smith profile photo">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>Jane Smith</h5>
+                                                        <span class="speaker-role">
+                                                            <p>Design Expert</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Speaker 3 -->
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png"
+                                                            alt="Michael Lee profile photo">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>Michael Lee</h5>
+                                                        <span class="speaker-role">
+                                                            <p>Keynote Speaker</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Event 2 -->
+                                    <div class="event-card" data-category="program">
+                                        <div class="row p-3 event-image-card">
+
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Sparkle & Shine on <br>
+Celebrations</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg" alt="">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3 -->
+
+                                    <div class="event-card" data-category="workshop">
+                                        <div class="row p-3 event-image-card">
+
+                                            <div class="event-content col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h3>Events That Leave a <br> Impression</h3>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="event-meta">
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/time.svg" alt="">
+                                                                </div>
+                                                                <span>10:00 AM To 09 PM - 09 Nov 2025</span>
+                                                            </div>
+                                                            <div class="meta-item">
+                                                                <div class="meta-icon">
+                                                                    <img src="images/icons/event-location.svg" alt="">
+                                                                </div>
+                                                                <span>HALL - 01</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="event-description">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                                    ever since the 1500s, when an unknown printer took a galley of type
+                                                    and scrambled it to make a type specimen book.
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="speakers-row mt-4">
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+                                                            <div class="role-icon">
+                                                                <img src="images/icons/event-agenda-mike.svg" alt="">
+                                                            </div>
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="speaker-card">
+                                                    <div class="speaker-avatar">
+                                                        <img src="images/team/moderator.png" alt="">
+                                                    </div>
+                                                    <div class="speaker-info">
+                                                        <h5>John D. Alexon</h5>
+                                                        <span class="speaker-role">
+
+                                                            <p>Moderator</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
+
+                        <div class="text-center mt-5">
+                            <a class="btn-main py-3 px-5 agenda-list-btn" href="tickets-2.html"><span>View Agenda
+                                    List</span> <img src="images/icons/right-arrow.svg" alt=""></a>
+                        </div>
                     </div>
+                </div>
                     </div>
         </section>
 
