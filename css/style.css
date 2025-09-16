@@ -379,7 +379,7 @@ ul {
 }
 
 .btn-download a {
-  color: var(--secondary-color) !important;
+  color: #ffffff !important;
 }
 
 .btn-register:hover {
@@ -638,7 +638,6 @@ ul {
   display: flex;
   text-align: center;
   gap: 20px;
-  justify-content: center;
 }
 
 .countdown-item {
@@ -2259,8 +2258,7 @@ footer li a {
 .speaker-section {
   position: relative;
   z-index: 2;
-  display: flex;
-  justify-content: center;
+  
 }
 
 .speaker-image {
@@ -4942,8 +4940,7 @@ h3.flow-cart-heading {
 
 .profile-header {
   display: flex;
-  align-items: start;
-  position: relative;
+ justify-content: center;
 }
 
 .profile-name {
@@ -4962,10 +4959,12 @@ h3.flow-cart-heading {
 }
 
 .profile-image {
-  width: 80%;
+  width: 100%;
   object-fit: cover;
   margin-bottom: 16px;
   z-index: 11;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .qr-section {
@@ -5303,14 +5302,125 @@ border: 1px solid #AE00FF;
   background-color: #1C192D;
 }
 
-.new-main-speaker-section .container{
+.new-main-speaker-section .first-section{
   background-image: url("/images/background/main-speaker.bg.jpg");
   background-size: cover;
   padding: 50px;
-  border-radius: 50px;
+  border-radius: 30px;
   border: 1px solid var(--secondary-color);
+}
+.new-main-speaker-section .second-section{
+  background-image: url("/images/background/main-speaker.bg2.jpg");
+  background-size: cover;
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid #AE00FF;
 }
 
 .new-main-speaker-section h2.committee-title{
   color: #fff;
 }
+
+
+/* News Carousel Scoped Styles */
+.news-carousel .news-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+ transition: all 0.3s ease-in-out;
+  min-height: 360px;
+  padding: 20px;
+  margin: 0 5px;
+}
+
+.news-carousel .news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.news-carousel .news-img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.news-carousel .news-body {
+  padding: 18px;
+}
+
+.news-carousel .news-category {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.news-carousel .news-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-carousel .news-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-carousel .news-title a:hover {
+  color: #007bff;
+}
+
+.news-carousel .news-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.news-carousel .news-date {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Owl Nav Scoped */
+.news-carousel .owl-item{
+  padding: 20px 0;
+}
+.news-carousel .owl-nav {
+  text-align: center;
+  margin-top: 15px;
+  display: block !important;
+}
+
+.news-carousel .owl-nav button {
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+}
+.news-carousel .owl-nav button i{
+  color: #000;
+}
+
+.news-carousel .owl-nav button:hover {
+  background: #000000 !important;
+  
+}
+
+.news-carousel .owl-nav button:hover i{
+  color: #ffffff;
+}
+
+.news-section h2, .imggallery h2{
+  color: #000000;
+    font-family: "Orbitron", monospace;
+font-size: 36px;
+}
+
+
