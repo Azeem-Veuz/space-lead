@@ -29,7 +29,7 @@
 
 body {
   font-family: "Gilroy-Regular", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   color: var(--text-white);
 }
 
@@ -4616,7 +4616,6 @@ h3.ticket-title {
   background-color: #1C192D;
   position: relative;
   overflow: hidden;
-  padding-bottom: 0 !important;
 
 
 }
@@ -5135,8 +5134,8 @@ h3.flow-cart-heading {
 }
 
 .plan-card img {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   transition: filter 0.3s ease;
 }
 
