@@ -235,7 +235,7 @@ $(document).ready(function(){
       768:{ items:2.8},
       1200:{ items:3.8 },
         1400:{ items:4.2  },
-        1600:{ items:4.8 }
+        1600:{ items:4.6 }
     }
     // stagePadding: 40 // use if you want partial preview
   });
