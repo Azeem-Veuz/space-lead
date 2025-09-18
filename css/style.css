@@ -2123,7 +2123,7 @@ footer li a {
 
 .date-card {
   border-radius: 2rem;
-  padding: 2.5rem 1.5rem;
+  padding:  1.5rem;
   color: var(--text-white);
   font-weight: 700;
   position: absolute;
@@ -2131,7 +2131,7 @@ footer li a {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
-  min-width: 200px;
+  min-width: 180px;
   text-align: center;
 }
 
@@ -2139,26 +2139,26 @@ footer li a {
 
 .date-card-teal {
   background: linear-gradient(177deg, rgba(90, 192, 190, 1) 0%, rgba(42, 90, 89, 1) 100%);
-  left: 50%;
+  /* left: 50%;
   right: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .date-card-purple {
   background: linear-gradient(177deg, rgba(127, 82, 159, 1) 0%, rgba(46, 29, 57, 1) 100%);
-  right: 100px;
-  top: 180px;
+  right: 20px;
+  top: 140px;
 
 
 }
 
-@media (min-width: 1200px) and (max-width: 1399px) {
+/* @media (min-width: 1200px) and (max-width: 1399px) {
   .date-card-purple {
     right: 0;
 
 
   }
-}
+} */
 
 .date-card-purple .date-number {
   color: rgba(90, 192, 190, 1);
@@ -4599,6 +4599,14 @@ h3.ticket-title {
 
 
 }
+.why-register-today.conference .bg-video2{
+  
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .why-register-today.conference .main-title {
   color: #ffffff !important;
@@ -4635,36 +4643,69 @@ h3.ticket-title {
 }
 
 /* CTA Section */
-.why-register-today.conference .cta-section {
+ .cta-section {
   position: relative;
-  background: url('/images/conference/cta.png') center/cover no-repeat;
-  overflow: hidden;
+  margin-top: -100px;
+}
+.cta-video video{
+  object-fit: cover;
+ width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  border-radius: 20px;
 }
 
-.why-register-today.conference .cta-overlay {
-  padding: 60px 20px;
+.cta-video{
+  position: absolute;
+ width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  overflow: hidden;
+  
+}
+
+.cta{
+  background-color: #1C192D;
+}
+
+ .cta-overlay {
+  padding: 80px 20px;
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 111;
+
 }
 
-.why-register-today.conference .cta-overlay h3 {
-  font-size: 2.4rem;
+.cta-overlay p{
+    font-family: "Azonix", sans-serif;
+    color: #5AC0BE;
+
+}
+
+ .cta-overlay h3 {
+  font-size: 4rem;
   margin-bottom: 20px;
-  font-family: "Gilroy-Regular", sans-serif;
+  font-family: "Orbitron", sans-serif !important;
 
 }
 
-.why-register-today.conference .btn-cta {
+ .btn-cta {
   background: var(--main-gradient);
   border: none;
   padding: 10px 25px;
   font-weight: 600;
   border-radius: 50px;
-  color: white;
   transition: all 0.3s ease;
+  margin-right: 10px;
+}
+.btn-cta a{
+  color: white;
 }
 
-.why-register-today.conference .btn-cta:hover {
+
+ .btn-cta:hover {
   opacity: 0.9;
 }
 
@@ -5602,7 +5643,7 @@ h2.exhibitor-h2{
         }
         
         .date-month {
-            font-size: 0.85rem;
+            font-size: 18px;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
