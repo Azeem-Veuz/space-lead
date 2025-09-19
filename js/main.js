@@ -452,6 +452,33 @@ $(".news-carousel").owlCarousel({
 });
 
 
+// text amination
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+      const textElements = document.querySelectorAll(".animate");
+
+      textElements.forEach(textElement => {
+        const text = textElement.textContent;
+        textElement.innerHTML = text.split("").map(char => `<span>${char}</span>`).join("");
+
+        const chars = textElement.querySelectorAll("span");
+
+        gsap.from(chars, {
+          scrollTrigger: {
+            trigger: textElement,
+            start: "top 75%",
+            end: "bottom 20%",
+            scrub: true,
+          },
+          color: "#B7BCD4",
+          stagger: 1,  // Delay between each character animation
+          duration: 1,
+        });
+      });
+})
+
+
 
 
 

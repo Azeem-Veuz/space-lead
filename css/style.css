@@ -320,9 +320,16 @@ ul {
 }
 
 .navbar.scrolled {
-  background: rgba(26, 35, 50, 0.95);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: #264750;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.green-nav{
+  background: #264750;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -654,7 +661,7 @@ ul {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100px;
-  height: 100px;
+  height: 95px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -663,14 +670,15 @@ ul {
 
 .countdown-number {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--secondary-color);
-  display: block;
+  margin-bottom: 0;
+  font-family: var(--body-font);
 }
 
 .countdown-label {
   font-size: 0.9rem;
-  color: var(--text-gray);
+  color: #fff;
   text-transform: capitalize;
 }
 
@@ -1279,7 +1287,7 @@ h6.member-name {
 }
 
 p.event-description {
-  color: #b0b0b0 !important;
+  color: #fff ;
   font-size: 1.2rem;
   line-height: 1.6;
   margin-top: 1rem;
@@ -1463,7 +1471,7 @@ p.event-description {
 .event-meta {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+ gap: 8px;
 }
 
 .meta-item {
@@ -1837,10 +1845,15 @@ a.download {
   background: none;
 }
 
-.sponsorship-section h2.main-heading,
+
 .all-sponsors h2.main-heading,
 .package-benefits h2.main-heading {
   font-family: "Raleway", sans-serif !important;
+
+}
+
+.sponsorship-section h2.main-heading{
+    font-family: "Orbitron", sans-serif;
 
 }
 
@@ -2741,7 +2754,9 @@ h6.event-agenda-label2 {
 
 /* isotop */
 .portfolio-menu {
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .portfolio-menu ul li {
@@ -2757,17 +2772,19 @@ h6.event-agenda-label2 {
   transition: all .5s ease;
   width: 120px;
   height: 30px;
-  background-color: #5AC0BE21;
+  background-color: #5AC0BE;
   border: none;
-  color: #7c7c7c;
+  color: #fff;
   border-radius: 50px;
   font-weight: 500;
 }
 
+
+
 .portfolio-menu ul li.btn-outline-dark.active,
 .portfolio-menu ul li.btn-outline-dark:hover {
-  background-color: #5AC0BE21;
-  color: #0F9F9D;
+  background-color: #5AC0BE;
+  color: #000;
 }
 
 .portfolio-menu ul {
@@ -2778,6 +2795,18 @@ h6.event-agenda-label2 {
 .portfolio-item video {
   width: 100%;
   object-fit: cover;
+}
+
+.connect-with-us{
+background-color: #5AC0BE;
+padding: 10px 15px;
+border-radius: 50px;
+color: #000;
+}
+.connect-with-us i{
+  color: #000;
+  margin: 0 5px;
+  font-size: 18px;
 }
 
 .portfolio-item .item {
@@ -2898,6 +2927,10 @@ h6.event-agenda-label2 {
   font-size: 18px;
   font-weight: 500;
   line-height: 30px;
+}
+
+p.event-description2{
+color: #fff !important;
 }
 
 .tab-content p strong {
@@ -4647,6 +4680,16 @@ h3.ticket-title {
   position: relative;
   margin-top: -100px;
 }
+
+.cta-section2{
+position: relative;
+  margin-top: -50px;
+}
+
+.cta-section3{
+position: relative;
+  margin-top: 150px;
+}
 .cta-video video{
   object-fit: cover;
  width: 100%;
@@ -4660,6 +4703,7 @@ h3.ticket-title {
  width: 100%;
   height: 100%;
   top: 0;
+  right: 0;
   z-index: 0;
   overflow: hidden;
   
@@ -4675,6 +4719,16 @@ h3.ticket-title {
   color: white;
   position: relative;
   z-index: 111;
+
+}
+
+.shade{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(1deg,rgba(28, 25, 45, 0) 0%, rgba(28, 25, 45, 1) 100%);
 
 }
 
@@ -5860,3 +5914,58 @@ h2.exhibitor-h2{
           position: relative;
           z-index: 22;
         }
+
+        .bredcrumb .date {
+          flex-direction: row;
+        }
+
+        .bredcrumb .date img{
+          width: 18px;
+        }
+
+        .bredcrumb .date .btn-line{
+          font-size: 14px;
+          padding: 10px 20px;
+          background-color: #FFFFFF14;
+          color: #90D3D0;
+          border-radius: 50px;
+        }
+
+        .main-agenda{
+          background-color: transparent;
+        }
+.add-to-caledar{
+  text-align: end;
+}
+        .add-to-caledar a{
+          padding: 8px 12px;
+          background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(46, 29, 57, 1) 100%);
+          border-radius: 50px;
+        }
+
+        .add-to-caledar span{
+          color: #fff;
+        }
+
+        .animate {
+      color: #000000; /* final color */
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+        font-family: "Raleway", sans-serif !important;
+
+
+    }
+
+    .sponsor-stats .stats-container{
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+
+    .find-us{
+      background-color: #1C192D;
+    }
+
+    .find-us h2{
+      color: #ffffff;
+    }
