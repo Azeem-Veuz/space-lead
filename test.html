@@ -1,67 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GSAP Scroll Animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Video Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a2332 50%, #2c3e50 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-  <style>
-    body {
-      background-color: #BCCBAE;
-      margin: 0;
-      font-family: "Raleway", sans-serif;
-      height: 200vh;
-    }
+        .video-container {
+            position: relative;
+            width: 90vw;
+            max-width: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
 
-    .animate-text {
-      color: #0E3C34; /* final color */
-      max-width: 800px;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 38px;
-      margin: 200px auto;
-    }
+        .video-element {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    .animate span {
-      display: inline-block;
-      color: #fff; /* start white */
-    }
-  </style>
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .play-pause-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgba(0, 255, 255, 0.8);
+            color: #00ffff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .play-pause-btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
-  <div class="animate">
-    Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus donec cursus scelerisque vehicula sit per. Pellentesque aenean consectetur diam at; etiam dictumst morbi proin. Suspendisse suspendisse maximus parturient sed mattis cras semper. Ante faucibus fermentum ut blandit sagittis blandit enim diam. Sed nec efficitur ligula scelerisque semper enim. Sapien mauris diam hendrerit conubia tempor. Nec augue elementum orci ullamcorper a torquent; sed feugiat. Vitae quisque sagittis primis parturient fames facilisi eleifend. Condimentum pulvinar scelerisque urna sapien curae malesuada non.
-  </div>
+    <div class="video-container-gallery">
+        <video class="video-element" id="myVideo">
+            <source src="images/background/attend-bg-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="controls">
+            <button class="play-pause-btn" id="playPauseBtn">▶</button>
+        </div>
+    </div>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        const video = document.getElementById('myVideo');
+        const playPauseBtn = document.getElementById('playPauseBtn');
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      gsap.registerPlugin(ScrollTrigger);
+        playPauseBtn.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = '⏸';
+            } else {
+                video.pause();
+                playPauseBtn.textContent = '▶';
+            }
+        });
 
-      const textElement = document.querySelector(".animate");
-      const text = textElement.textContent;
-      textElement.innerHTML = text.split("").map(char => `<span>${char}</span>`).join("");
-
-      const chars = textElement.querySelectorAll("span");
-
-      gsap.to(chars, {
-        scrollTrigger: {
-          trigger: textElement,
-          start: "top 25%",
-          end: "bottom 20%",
-          scrub: true,
-        },
-        color: "#000000", // final color
-        stagger: 1,    // animate letter by letter
-        duration: 2,
-      });
-    });
-  </script>
+        // Reset button to play when video ends
+        video.addEventListener('ended', function() {
+            playPauseBtn.textContent = '▶';
+        });
+    </script>
 </body>
 </html>

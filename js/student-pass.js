@@ -100,14 +100,85 @@ form.addEventListener("submit", function (e) {
 
 // ---------- EVENT CARDS ----------
 const cards = document.querySelectorAll(".event-cards");
-const ticketSummary = document.getElementById("ticketSummary");
+const studentFields = document.querySelectorAll(".student-field");
+const professionalFields = document.querySelectorAll(".professional-field");
+
+// Badge elements
+const badgeCategory = document.querySelector(".badge-category");
+const jobTitle = document.querySelector(".job-title");
+const companyName = document.querySelector(".company-name");
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
+    // Toggle active card
     cards.forEach(c => c.classList.remove("active"));
     card.classList.add("active");
     card.querySelector("input").checked = true;
 
-    ticketSummary.classList.toggle("d-none", card.querySelector("input").value !== "workshop");
+    if (card.querySelector("input").value === "student") {
+      // Show Student fields
+      studentFields.forEach(f => f.classList.remove("d-none"));
+      professionalFields.forEach(f => f.classList.add("d-none"));
+
+      // Update badge
+      badgeCategory.textContent = "STUDENT";
+      jobTitle.classList.add("d-none");
+      companyName.classList.add("d-none");
+
+    } else {
+      // Show Professional fields
+      studentFields.forEach(f => f.classList.add("d-none"));
+      professionalFields.forEach(f => f.classList.remove("d-none"));
+
+      // Update badge
+      badgeCategory.textContent = "PROFESSIONAL";
+      jobTitle.classList.remove("d-none");
+      companyName.classList.remove("d-none");
+    }
   });
 });
+
+// ---------- FORM INPUTS ----------
+const firstNameInput = document.getElementById("firstName");
+const lastNameInput = document.getElementById("lastName");
+const jobTitleInput = document.getElementById("jobTitle");
+const companyNameInput = document.getElementById("companyName");
+
+// ---------- BADGE PREVIEW ELEMENTS ----------
+const badgeFullName = document.querySelector(".full-name");
+const badgeJobTitle = document.querySelector(".job-title");
+const badgeCompanyName = document.querySelector(".company-name");
+
+// ---------- UPDATE FUNCTIONS ----------
+function updateFullName() {
+  const firstName = firstNameInput.value.trim();
+  const lastName = lastNameInput.value.trim();
+
+  badgeFullName.textContent = firstName || lastName
+    ? `${firstName} ${lastName}`.trim()
+    : "FULL NAME";
+}
+
+function updateJobTitle() {
+  badgeJobTitle.textContent = jobTitleInput.value.trim() || "Job Title";
+}
+
+function updateCompanyName() {
+  badgeCompanyName.textContent = companyNameInput.value.trim() || "Company Name";
+}
+
+// ---------- EVENT LISTENERS ----------
+[firstNameInput, lastNameInput].forEach(inp =>
+  inp.addEventListener("input", updateFullName)
+);
+
+jobTitleInput.addEventListener("input", updateJobTitle);
+companyNameInput.addEventListener("input", updateCompanyName);
+
+// ---------- INITIAL CALL (so defaults show properly) ----------
+updateFullName();
+updateJobTitle();
+updateCompanyName();
+
+
+

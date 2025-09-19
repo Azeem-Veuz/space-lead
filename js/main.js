@@ -479,6 +479,26 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
+// gallery video play
+
+ const video = document.getElementById('myVideo');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+
+        playPauseBtn.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = '⏸';
+            } else {
+                video.pause();
+                playPauseBtn.textContent = '▶';
+            }
+        });
+
+        // Reset button to play when video ends
+        video.addEventListener('ended', function() {
+            playPauseBtn.textContent = '▶';
+        });
+
 
 
 

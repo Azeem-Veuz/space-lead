@@ -3131,6 +3131,7 @@ color: #fff !important;
   color: #fff;
   display: block;
   height: 100%;
+  position: relative;
 }
 
 .student {
@@ -3209,7 +3210,6 @@ color: #fff !important;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  height: 150px;
   text-align: left;
   font-family: var(--body-font);
 }
@@ -3241,7 +3241,7 @@ color: #fff !important;
 
 .event-cards label h4 {
   font-family: var(--body-font);
-
+margin-bottom: 0;
   margin-left: 10px;
 
 
@@ -3252,6 +3252,21 @@ color: #fff !important;
   font-size: 36px;
   text-align: left;
   font-weight: 600;
+  
+}
+
+.event-cards.conference small{
+  color: #47F8F4;
+}
+
+.event-cards.workshop small{
+  color: #B853FF;
+}
+
+.advisor{
+   color: #7F529F;
+   text-transform: uppercase;
+
 }
 
 /* HTML:  */
@@ -3282,7 +3297,8 @@ color: #fff !important;
 
 .ribbon-free {
   background: linear-gradient(166deg, rgba(246, 255, 0, 1) 0%, rgba(129, 134, 0, 1) 100%);
-  color: #005149;
+  color: #000;
+  font-weight: 400;
 }
 
 .event-card label h4 {
@@ -3487,7 +3503,7 @@ h2.full-name {
   font-weight: bold;
   color: #333;
   letter-spacing: 3px;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 
@@ -5969,3 +5985,51 @@ h2.exhibitor-h2{
     .find-us h2{
       color: #ffffff;
     }
+
+    .video-container-gallery {
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            height: 500px;
+        }
+
+        .video-element {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .play-pause-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #b1b1b1;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: transparent;
+        }
+
+        .play-pause-btn:hover {
+            
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .social-names a{
+  font-family: "Azonix", sans-serif;
+color: #5AC0BE;
+        }

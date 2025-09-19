@@ -20,8 +20,7 @@
 <body>
 
    
-
-
+ 
 
 <!-- Fixed Register Now vertical button -->
         <a href="register.html" id="registerNowFixed" title="Register Now"><span>Register Now</span></a>
@@ -50,7 +49,6 @@
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Media</a></li>
                     <li class="nav-item btn-download btn-register"><a class="nav-link" href="#"><i
                                 class="fas fa-download me-2"></i>Download the App</a></li>
-
                     
                 </ul>
                 
@@ -67,7 +65,7 @@
                         <div class="col-lg-7 col-xl-8 col-12" data-aos="zoom-out" data-aos-duration="3000">
                             <a class="btn-main mb-3" href="register.html"><span class="d-flex align-items-center"> <img
                                         src="images/icons/ticket.svg" alt="" class="me-1">Register Now</span></a>
-                            <h1 class=" text-uppercase mb-3 lh-1">PROFESSIONAL pass</h1>
+                            <h1 class=" text-uppercase mb-3 lh-1">STUDENT PASS</h1>
 
                             <div class="date gap-3 d-flex align-items-start justify-content-start">
                                 <span class=" btn-line"><img src="images/icons/calendar.svg" alt=""><span>Nov 09, 10, 11
@@ -108,54 +106,43 @@
     
 
       
-       <section class="pass-section pass-student">
-
-        <video autoplay muted loop playsinline>
+         <section class="pass-section pass-student">
+           <video autoplay muted loop playsinline>
                 <source src="/images/background/register-bg.mp4" type="video/mp4">
                 
             </video>
-
         <div class="overlay3"></div>
 
         <div class="container">
-  <h2 class="section-heading">Select Your Pass</h2>
-  <p class="text-center which-session">Which session you wish to attend?</p>
-  <!-- Radio Button Cards -->
-    <div class="row g-3">
-      <div class="col-lg-6">
-        <div class="event-cards conference active">
-          <div class="d-flex align-items-center mb-5">
-          <input type="radio" name="event" id="conf" value="conference" checked>
-          <label for="conf">
-            <h4>Conference</h4>
-            
-          </label>
-          </div>
-          <span>Free</span>
-          <div class="ribbon ribbon-free">Free</div>
-          <div class="shape-free">
-            <img src="images/register/free-card-shape.png" alt="">
-          </div>
-        </div>
+  <h2 class="section-heading">Secure your place at the frontier of discoverys</h2>
+    <!-- ---------- EVENT CARDS ---------- -->
+<div class="row g-3">
+  <div class="col-lg-6">
+    <div class="event-cards conference active">
+      <div class="d-flex align-items-center">
+        <input type="radio" name="event" id="conf" value="student" checked>
+        <label for="conf">
+          <h4>Student</h4>
+        </label>
+        
       </div>
-      <div class="col-lg-6">
-        <div class="event-cards workshop">
-          <div class="d-flex align-items-center mb-5">
-          <input type="radio" name="event" id="work" value="workshop">
-          <label for="work">
-            <h4>Workshop</h4>
-            
-          </label>
-          </div>
-          <span>SAR. 369.00</span>
-
-          <div class="ribbon">Early Bird</div>
-          <div class="shape-free">
-            <img src="images/register/paid-card-shape.png" alt="">
-          </div>
-        </div>
-      </div>
+      <span>SAR.150.00</span> <br>
+          <small>Inclusive of 15% VAT.</small>
     </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="event-cards workshop">
+      <div class="d-flex align-items-center">
+        <input type="radio" name="event" id="work" value="professional">
+        <label for="work">
+          <h4>Professional</h4>
+        </label>
+      </div>
+      <span>SAR. 369.00</span><br>
+<small>Inclusive of 15% VAT.</small>
+    </div>
+  </div>
+</div>
 
    
       <h5 class="text-center my-3 please-enter">PLEASE ENTER YOUR INFORMATION</h5>
@@ -211,20 +198,33 @@
       <div class="error">Valid email is required</div>
     </div>
 
-    <!-- 🔹 Replaced Institution Name with Job Title -->
-    <div class="form-group col-lg-6">
-      <label for="jobTitle">Job Title <span style="color: red;">*</span></label>
-      <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" required>
-      <div class="error">Job title is required</div>
-    </div>
+   <!-- 🔹 Student Fields -->
+<div class="form-group col-lg-6 student-field">
+  <label for="institution">Institution Name <span style="color: red;">*</span></label>
+  <input type="text" id="institution" name="institution" placeholder="Institution Name" required>
+  <div class="error">Institution name is required</div>
+</div>
 
-    <!-- 🔹 Replaced Student ID with Company Name -->
-    <div class="form-group col-lg-6">
-      <label for="companyName">Company Name <span style="color: red;">*</span></label>
-      <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
-      <div class="error">Company name is required</div>
-    </div>
-    <div class="form-group col-lg-6">
+<div class="form-group col-lg-6 student-field">
+  <label for="studentId">Student ID <span style="color: red;">*</span></label>
+  <input type="file" id="studentId" name="studentId" required>
+  <div class="error">Student ID upload is required</div>
+</div>
+
+<!-- 🔹 Professional Fields -->
+<div class="form-group col-lg-6 professional-field d-none">
+  <label for="jobTitle">Job Title <span style="color: red;">*</span></label>
+  <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" required>
+  <div class="error">Job title is required</div>
+</div>
+
+<div class="form-group col-lg-6 professional-field d-none">
+  <label for="companyName">Company Name <span style="color: red;">*</span></label>
+  <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
+  <div class="error">Company name is required</div>
+</div>
+
+<div class="form-group col-lg-6">
     <button type="submit" class="btn-main submit-btn"> Complete Your Registration <i class="fas fa-arrow-right"></i></button>
     </div>
   </form>
@@ -232,7 +232,7 @@
   <!-- Ticket Summary -->
      
 
-      <div class="ticket-summary  d-none mt-5" id="ticketSummary">
+      <div class="ticket-summary   mt-3" >
   <h3 class="ticket-title">Your Ticket Summary</h3>
   
   <div class="ticket-details">
@@ -275,22 +275,19 @@
                     <div class="qr-code">
                         <img src="images/scanner.png" alt="">
                     </div>
-                    <div class="badge-id badge-id-pro">#AB0369</div>
+                    <div class="badge-id">#AB0369</div>
                 </div>
                 
-                <h2 class="full-name full-name-pro">
+                <h2 class="full-name">
                     FULL NAME
                 </h2>
-                <!-- ✅ Added Job Title -->
-      <div class="job-title">Job title</div>
 
-      <!-- ✅ Added Company Name -->
-      <div class="company-name">Tech Corp Ltd.</div>
+                <div class="advisor">ADVISORS 360</div>
             </div>
             
             <div class="badge-footer">
                 <div class="badge-category-label">BADGE CATEGORY</div>
-                <h3 class="badge-category">Professional</h3>
+                <h3 class="badge-category">STUDENT</h3>
             </div>
         </div>
         </div>
@@ -414,7 +411,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-<script src="js/professional-pass.js"></script>
+<script src="js/student-pass.js"></script>
  <script src="js/main.js"></script>
 
  <script>
